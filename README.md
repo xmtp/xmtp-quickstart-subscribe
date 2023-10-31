@@ -2,7 +2,7 @@
 
 This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
 
-![](video.gif)
+![](animation.gif)
 
 #### Import libraries
 
