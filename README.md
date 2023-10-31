@@ -2,6 +2,8 @@
 
 This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
 
+![](video.gif)
+
 #### Import libraries
 
 Import the necessary XMTP and Ethereum packages. These libraries enable you to create an XMTP client and interact with the Ethereum blockchain.
