@@ -10,7 +10,7 @@ Import the necessary XMTP and Ethereum packages. These libraries enable you to c
 
 ```jsx
 import React, { useEffect, useState } from "react";
-import { Client } from "@xmtp/react-sdk";
+import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 ```
 
