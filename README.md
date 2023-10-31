@@ -1,4 +1,4 @@
-# Enabling Subscribers with XMTP
+## Enabling Subscribers with XMTP
 
 This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
 
