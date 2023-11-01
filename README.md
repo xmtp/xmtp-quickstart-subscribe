@@ -17,8 +17,7 @@ This tutorial will guide you on how to create a simple `Subscribe` button with c
     }}
     onError={(error) => console.log("Error subscribing: " + error)}
     env="production"
-/>
-
+  />
 </div>
 <div id="subscribeArray" style={{ textAlign: "center", fontSize: "12px" }}></div>
 
