@@ -1,25 +1,8 @@
-import { Subscribe } from "/components/Subscribe";
-
 ## Enabling Subscribers with XMTP
 
 This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
 
 ![](animation.gif)
-
-<div className="widget-container">
-  <Subscribe
-    senderAddress="0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"
-    onSubscribe={(address) => {
-      console.log("New subscriber: ", address);
-    }}
-    onUnsubscribe={(address) => {
-      console.log("Unsubscriber: ", address);
-    }}
-    onError={(error) => console.log("Error subscribing: " + error)}
-    env="production"
-  />
-</div>
-<div id="subscribeArray" style={{ textAlign: "center", fontSize: "12px" }}></div>
 
 #### Import libraries
 

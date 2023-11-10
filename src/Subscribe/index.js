@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Client } from "@xmtp/xmtp-js";
 import { ethers } from "ethers";
 
@@ -70,19 +70,20 @@ export function Subscribe({
       // Refresh content list
       await client.contacts.refreshConsentList();
       // Get the consent state of the subscriber
-      let state = client.contacts.consentState(client.address);
+      let state = client.contacts.consentState(senderAddress);
       // If the state is unknown or blocked, allow the subscriber
       if (state == "unknown" || state == "denied") {
-        await client.contacts.allow([client.address]);
-        if (typeof onSubscribe === "function") onSubscribe(client.address);
+        state = "allowed";
+        await client.contacts.allow([senderAddress]);
+        if (typeof onSubscribe === "function")
+          onSubscribe(client.address, state);
       } else if (state == "allowed") {
+        state = "denied";
+        await client.contacts.deny([senderAddress]);
         // If the state is allowed, block the subscriber
-        if (typeof onUnsubscribe === "function") onUnsubscribe(client.address);
+        if (typeof onUnsubscribe === "function")
+          onUnsubscribe(client.address, state);
       }
-      // Create a log message
-      let log = "Address " + client.address + " subscribed to " + senderAddress;
-      setConsentLog(log);
-      console.log(log);
 
       // Set the subscription label
       setSubscriptionStatus("Consent State: " + state);
