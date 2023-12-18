@@ -16,17 +16,22 @@ const InboxPage = () => {
       <h1>Subscribe Button </h1>
 
       <Subscribe
-        theme="default"
-        size="medium"
-        onConsentChange={(address, state) => {
-          console.log("New subscriber: ", address, state);
-          let subscriber = subscribeArray.find(
-            (sub) => sub.address === address,
-          );
-          if (subscriber) subscriber.state = state;
-          else subscribeArray.push({ address, state });
-
-          setSubscribeArray(subscribeArray);
+        senderAddress="0x93E2fc3e99dFb1238eB9e0eF2580EFC5809C7204"
+        onSubscribe={(address, state) => {
+          console.log("New subscriber: ", { address, state });
+          setSubscribeArray((prevArray) => [...prevArray, { address, state }]);
+        }}
+        onUnsubscribe={(address, state) => {
+          console.log("Unsubscribed: ", { address, state });
+          setSubscribeArray((prevArray) => {
+            const index = prevArray.findIndex((a) => a.address === address);
+            if (index !== -1) {
+              const newArray = [...prevArray];
+              newArray[index].state = state;
+              return newArray;
+            }
+            return prevArray;
+          });
         }}
         onError={(error) => console.log("Error subscribing: " + error)}
         env="production"
