@@ -67,11 +67,13 @@ export function Subscribe({
       // Get the subscriber
       let wallet = await connectWallet();
       let client = await Client.create(wallet, { env: env });
-      // Refresh content list
+
+      // Refresh the consent list to make sure your application is up-to-date with the
       await client.contacts.refreshConsentList();
 
       // Get the consent state of the subscriber
       let state = client.contacts.consentState(senderAddress);
+
       // If the state is unknown or blocked, allow the subscriber
       if (state === "unknown" || state === "denied") {
         state = "allowed";
@@ -87,6 +89,7 @@ export function Subscribe({
       }
 
       //Print the whole list
+      console.log(await client.contacts.refreshConsentList());
       console.log(await client.contacts.loadConsentList());
 
       // Set the subscription label
