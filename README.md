@@ -64,11 +64,11 @@ Based on the current state, we either allow or block the subscriber.
 ```jsx
 // If the state is unknown or blocked, allow the subscriber
 if (state == "unknown" || state == "denied") {
-  await client.contacts.allow([client.address]);
+  await client.contacts.allow([senderAddress]);
 }
 ```
 
-- If the state is `unknown` or `blocked`, we change it to `allowed` using `client.contacts.allow([address])` and we call the `onSubscribe` function if it exists.
+- If the state is `unknown` or `blocked`, we change it to `allowed` using `client.contacts.allow([senderAddress])` and we call the `onSubscribe` function if it exists.
 - If the state is `allowed`, we don't change the consent and we call the `onUnsubscribe` function if it exists.
 
 **Callbacks**
