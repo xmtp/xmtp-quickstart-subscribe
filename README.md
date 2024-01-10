@@ -35,7 +35,7 @@ let wallet = await connectWallet();
 let client = await Client.create(wallet, { env: env });
 ```
 
-##### Consent State Management
+#### Consent State Management
 
 This section delves into a crucial part of the subscription widget — managing the consent state of a subscriber. We'll explore how to get the subscriber's address, refresh the consent list, get the current consent state, and then update it based on user actions.
 
