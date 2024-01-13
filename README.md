@@ -90,7 +90,7 @@ The `onSubscribe` and `onUnsubscribe` functions are called when the consent stat
 
 ## Caution :warning:
 
-**Always synchronize consent states:** Before updating consent preferences on the network, ensure you refresh the consent list with `await xmtp.contacts.refreshConsentList();`. Update the network's consent list only in these scenarios:
+**Always synchronize consent states:** Before updating consent preferences on the network, ensure you refresh the consent list with `refreshConsentList`. Update the network's consent list only in these scenarios:
 
 - **User Denies Contact:** Set to `denied` if a user blocks or unsubscribes.
 - **User Allows Contact:** Set to `allowed` if a user subscribes or enables notifications.
