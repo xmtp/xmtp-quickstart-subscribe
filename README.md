@@ -14,6 +14,8 @@ Before diving into the code let's consider important aspects while integrating c
 
 ## Tutorial
 
+Please refer to the XMTP documentation for comprehensive information regarding the implementation.
+
 - [Import libraries](https://junk-range-possible-git-portableconsenttutorials-xmtp-labs.vercel.app/docs/tutorials/portable-consent/subscribe#tutorial)
 
 - [Subscribe with your wallet](https://junk-range-possible-git-portableconsenttutorials-xmtp-labs.vercel.app/docs/tutorials/portable-consent/subscribe#tutorial)
