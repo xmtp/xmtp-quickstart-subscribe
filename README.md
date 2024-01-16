@@ -14,8 +14,6 @@ Before diving into the code let's consider important aspects while integrating c
 
 ## Tutorial
 
----
-
 - [Import libraries](https://junk-range-possible-git-portableconsenttutorials-xmtp-labs.vercel.app/docs/tutorials/portable-consent/subscribe#tutorial)
 
 - [Subscribe with your wallet](https://junk-range-possible-git-portableconsenttutorials-xmtp-labs.vercel.app/docs/tutorials/portable-consent/subscribe#tutorial)
