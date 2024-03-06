@@ -1,8 +1,17 @@
-# Enabling Subscribers with XMTP
+# How to Broadcast with XMTP
 
-This tutorial will guide you on how to create a simple `Subscribe` button with consent that enables the user to subscribe to your messages or notifications.
+![xmtp](https://github.com/xmtp/xmtp-quickstart-reactjs/assets/1447073/3f2979ec-4d13-4c3d-bf20-deab3b2ffaa1)
+
+This tutorial will guide you on how to create a simple `Broadcast` that enables the user to broadcast messages to one or many specified Ethereum addresses.
 
 ![](animation.gif)
+
+## Installation
+
+```bash
+yarn install
+yarn dev
+```
 
 ## Considerations
 
